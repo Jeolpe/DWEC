@@ -1,0 +1,14 @@
+body {
+    margin: 0 auto;
+}
+
+#contenedor {
+    padding-left: 0.5em;
+    text-align: left;
+    width: 500px;
+    height: 1000px;
+}
+
+#texto {
+    text-align: center;
+}
