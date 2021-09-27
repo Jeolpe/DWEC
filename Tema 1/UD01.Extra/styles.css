@@ -1,3 +1,9 @@
+/*
+* @utor Jesús María Olalla Pérez.
+* 2º DAW
+* Desarrollo web en entorno cliente.
+*/
+
 body {
     margin: 0 auto;
 }
@@ -11,4 +17,5 @@ body {
 
 #texto {
     text-align: center;
+    color: grey;
 }
