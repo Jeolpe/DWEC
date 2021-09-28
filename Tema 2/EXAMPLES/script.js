@@ -1,10 +1,3 @@
-/*
-*@utor Jesús María Olalla Pérez.
-* 2ºDAW
-* Desarrollo web en entorno cliente.
-*  */
-
-
 //Ejercicio 2.1 y 2.2
 const mensajes = () => {
     console.log(`Esto es un texto en la consola`); //Esto presenta texto en la consola.
@@ -100,4 +93,178 @@ const coercion4 = () => {
         console.log("false"); //Esta respuesta la aceptaría el "if".
     }
 }
+
+//Ejercicio 3.5(1)
+const arraysUni1 = () => {
+    function tresCinco() {
+        let vector = []; //También se puede hacer let vector = new Array();
+        vector[0] = 55;
+        vector[1] = 88;
+        vector[2] = 6;
+
+        // Esto es para comprobarlo.
+
+        for (let i = 0; i < vector.length; i++) {
+            console.log(`${vector[i]}`);
+        }
+    }
+
+    tresCinco();
+}
+
+//Ejercicio 3.5(2)
+const arraysUni2 = () => {
+    function tresCinco() {
+        let arr = ["2", "20", "200", "2000"];
+
+        for (let i = 0; i < arr.length < 500; i++) {
+            console.log(i);
+        }
+        /*
+          También se puede colocar así.
+          for (const arrKey in arr) {
+              console.log(arrKey);
+          }
+          */
+    }
+
+    tresCinco();
+}
+
+//Ejercicio 3.5(3)
+const arraysMulti = () => {
+    function tresCinco() {
+        let actividades = [
+            ['correr', 9],
+            ['saltar', 1],
+            ['trabajar', 2],
+            ['dormir', 1],
+            ['escribir', 7]
+        ];
+    }
+
+    tresCinco();
+}
+
+//Ejercicio 3.5(4)
+const arraysBidi = () => {
+    function tresCinco() {
+        let actividades = [
+            ['correr', 9],
+            ['saltar', 1],
+            ['trabajar', 2],
+            ['dormir', 1],
+            ['escribir', 7]
+        ];
+
+        //Esto es una forma:
+        for (const i in actividades) {
+            for (const j in actividades[i]) {
+                console.table(`[ ${i} , ${j} ] = ${actividades[i][j]}`);
+            }
+        }
+
+        /* Para ponerlo bonito en una línea
+        let linea = "";
+        for (let i = 0; i < actividades.length; i++) {
+            for (let j = 0; j < actividades[i].length; j++) {
+                linea += actividades[i][j] + " ";
+                console.log(linea);
+                linea = "";
+            }
+            */
+
+        /* Con el foreach
+        actividades.foreach(activity) => {
+        actividades.foreach(data) => {
+            console.log(data);
+            }
+        }
+        console.table
+         */
+
+        /*
+        //Esto es otra forma:
+
+        for (let i = 0; i < actividades.length; i++) {
+            let innerArrayLength = actividades[i].length;
+            for (let j = 0; j < innerArrayLength; j++) {
+                console.log(`[ ${i} , ${j} ] = ${actividades[i][j]}`);
+            }
+
+        }
+         */
+    }
+
+    tresCinco();
+}
+
+const arraysClonacion = () => {
+    let arr = [3, 5, 9, 10, 15, 14];
+
+    //Hay 2 formas:
+    let copiaArr1 = Object.assign(arr);
+
+    //Mejor esta:
+    let copiaArr2 = JSON.parse(JSON.stringify(arr));
+
+
+    for (const copiaArrElement of copiaArr1) {
+        console.log(copiaArrElement);
+    }
+    console.table(copiaArr2);
+}
+
+const conversionTipos = () => {
+    let num = "300"; //Es un número en una cadena de texto.
+    let num2 = "400.54" //Es un número en una cadena de texto.
+    let num3 = 500 //Esto es un número entero.
+    let n = parseInt(num); //Convierte numero entero.
+    let n2 = parseFloat(num2); //Almacena un decimal.
+    //Permite poner cuántos decimales poner.
+    let n3 = parseFloat(num2).toFixed(1);
+    let n4 = num3.toString(); //Almacena una cadena.
+}
+
+const usoEstricto = () => {
+    /*
+    //Ejemplo 1:
+  "use strict"
+    pi = 3.14; // Da error. Al ser uso estricto se debe de poner el tipo de la variable.
+    functionPrueba();
+
+    function functionPrueba(){
+        piBIS = 3.14; // Da error
+    }
+     */
+
+    //Ejemplo 2:
+    let pi = 3.14 //No da error
+    funcionPrueba();
+
+    function funcionPrueba() {
+        "use strict";
+        console.log(pi);
+        let piNew = 3.141592 //No da error.
+        console.log(piNew);
+    }
+
+}
+
+/*
+*@utor Jesús María Olalla Pérez.
+* 2ºDAW
+* Desarrollo web en entorno cliente.
+*  */
+
+
+
+
+
+
+
+
+
+
+
 
