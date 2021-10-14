@@ -486,7 +486,7 @@ const actividad03 = () => {
         }
 
         //Método getter para el anuncio.
-        get getAnuncio() {
+        anuncio() {
             console.log(`La marca ${this.marca} está disponible `);
         }
     }
@@ -501,7 +501,7 @@ const actividad03 = () => {
         }
 
         //Método getter para anuncio completo.
-        get getAnuncioCompleto() {
+        anuncioCompleto() {
             console.log(`El ${this.modelo} de ${this.marca} está ya a la venta`);
         }
 
@@ -512,10 +512,10 @@ const actividad03 = () => {
     const telephone2 = new modelo("Samsung", "Verde", 850, "Galaxy S4");
 
     //Llamamos al método getter y presentamos por pantalla.
-    telephone1.getAnuncio;
-    telephone1.getAnuncioCompleto;
-    telephone2.getAnuncio;
-    telephone2.getAnuncioCompleto;
+    telephone1.anuncio();
+    telephone1.anuncioCompleto();
+    telephone2.anuncio();
+    telephone2.anuncioCompleto();
 }
 
 
