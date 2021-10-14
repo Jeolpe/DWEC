@@ -1,5 +1,5 @@
 // Actividad 1
-//He probado hacerlo sin el "onclick".
+//He probado hacerlo sin "onclick".
 const inicio = () => {
     const actividad1 = document.getElementById("actividad1");
     actividad1.addEventListener('click', (e) => {
