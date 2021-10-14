@@ -1,5 +1,5 @@
 // Actividad 1
-//Este ejercicio lo hicimos en clase por eso no he puesto "onclick".
+//He probado hacerlo sin el "onclick".
 const inicio = () => {
     const actividad1 = document.getElementById("actividad1");
     actividad1.addEventListener('click', (e) => {
