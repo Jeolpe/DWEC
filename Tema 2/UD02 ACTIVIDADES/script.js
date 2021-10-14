@@ -89,7 +89,7 @@ const actividad23 = () => {
 }
 
 
-// Actividad 2.4
+// Actividad 2.4 
 const actividad24 = () => {
     //Definimos las variables
     let nota;
@@ -223,10 +223,10 @@ const actividad33 = () => {
 
 // Actividad 3.4
 const actividad34 = () => {
-    // Obtener la referencia del elemento body
+    // Obtener la referencia del elemento body.
     let body = document.querySelector("#actividad34");
 
-    // Crea un elemento <table> y un elemento <tbody>
+    // Crea un elemento <table> y un elemento <tbody>.
     let tabla = document.createElement("table");
     let tablaBody = document.createElement("tbody");
 
@@ -235,28 +235,28 @@ const actividad34 = () => {
 
     // Crea las celdas
     for (let i = 0; i < preguntaFila; i++) {
-        // Crea las hileras de la tabla
+        // Crea las hileras de la tabla.
         let fila = document.createElement("tr");
 
         for (let j = 0; j < preguntaColumna; j++) {
             // Crea un elemento <td> y un nodo de texto, haz que el nodo de
             // texto sea el contenido de <td>, ubica el elemento <td> al final
-            // de la hilera de la tabla
+            // de la hilera de la tabla.
             let columna = document.createElement("td");
             let textoColumna = document.createTextNode(`fila ${i + 1}, columna ${j + 1}`);
             columna.appendChild(textoColumna);
             fila.appendChild(columna);
         }
 
-        // agrega la hilera al final de la tabla (al final del elemento tablaBody)
+        // agrega la hilera al final de la tabla (al final del elemento tablaBody).
         tablaBody.appendChild(fila);
     }
 
-    // posiciona el <tbody> debajo del elemento <table>
+    // posiciona el <tbody> debajo del elemento <table>.
     tabla.appendChild(tablaBody);
     // appends <table> into <body>
     body.appendChild(tabla);
-    // modifica el atributo "border" de la tabla y lo fija a "2";
+    // modifica el atributo "border" de la tabla y lo fija a "2".
     tabla.setAttribute("border", "3");
 }
 
