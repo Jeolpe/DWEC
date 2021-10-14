@@ -1,23 +1,20 @@
 // Actividad 1
-const actividad1 = () => {
-    // Desde la consola.
-    console.log("¡Hola Mundo!");
+//Este ejercicio lo hicimos en clase por eso no he puesto "onclick".
+const inicio = () => {
+    const actividad1 = document.getElementById("actividad1");
+    actividad1.addEventListener('click', (e) => {
+        // Desde la consola.
+        console.log("¡Hola Mundo!");
 
-    // Desde una ventana emergente.
-    alert("¡Hola Mundo!");
-
-    //Desde el navegador.
-    document.getElementById("actividad1").addEventListener("click", mostrarMensaje());
-
-    //Función para mostrar el mensaje además del botón borrar que recarga la página para que se elimine el mensaje.
-    function mostrarMensaje() {
+        // Desde una ventana emergente.
+        alert("¡Hola Mundo!");
         document.getElementById('texto').innerHTML = "<p class='holaMundo'>¡Hola mundo!</p> <button id='borrar'>Borrar</button>";
         document.getElementById("borrar").addEventListener("click", (e) => {
             location.reload();
         });
-    }
+    });
 }
-
+window.onload = inicio;
 
 // Actividad 2.1
 const actividad21 = () => {
@@ -246,7 +243,7 @@ const actividad34 = () => {
             // texto sea el contenido de <td>, ubica el elemento <td> al final
             // de la hilera de la tabla
             let columna = document.createElement("td");
-            let textoColumna = document.createTextNode(`fila ${i+1}, columna ${j+1}`);
+            let textoColumna = document.createTextNode(`fila ${i + 1}, columna ${j + 1}`);
             columna.appendChild(textoColumna);
             fila.appendChild(columna);
         }
