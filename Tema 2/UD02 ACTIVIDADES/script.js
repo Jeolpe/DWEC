@@ -416,7 +416,7 @@ const actividad01 = () => {
 
         //método.
         nombreCompleto() {
-            console.log(`Mi nombre es ${this.nombre} ${this.apellidos}`);
+            return `Mi nombre es ${this.nombre} ${this.apellidos}`;
         }
     }
 
@@ -425,8 +425,8 @@ const actividad01 = () => {
     const persona2 = new persona("Alicia", "Santiago Sanchez", 31, "Mujer");
 
     //Se presenta en la pantalla.
-    persona1.nombreCompleto();
-    persona2.nombreCompleto();
+    console.log(persona1.nombreCompleto());
+    console.log(persona2.nombreCompleto());
 }
 
 // ACTIVIDAD 2. MÉTODOS SET Y GET. TELÉFONOS: MARCAS Y MODELOS (I)
@@ -487,7 +487,7 @@ const actividad03 = () => {
 
         //Método getter para el anuncio.
         anuncio() {
-            console.log(`La marca ${this.marca} está disponible `);
+            return `La marca ${this.marca} está disponible `;
         }
     }
 
@@ -502,7 +502,7 @@ const actividad03 = () => {
 
         //Método getter para anuncio completo.
         anuncioCompleto() {
-            console.log(`El ${this.modelo} de ${this.marca} está ya a la venta`);
+            return `El ${this.anuncio()} de ${this.marca} está ya a la venta`;
         }
 
     }
@@ -512,10 +512,10 @@ const actividad03 = () => {
     const telephone2 = new modelo("Samsung", "Verde", 850, "Galaxy S4");
 
     //Llamamos al método getter y presentamos por pantalla.
-    telephone1.anuncio();
-    telephone1.anuncioCompleto();
-    telephone2.anuncio();
-    telephone2.anuncioCompleto();
+    console.log(telephone1.anuncio());
+    console.log(telephone1.anuncioCompleto());
+    console.log(telephone2.anuncio());
+    console.log(telephone2.anuncioCompleto());
 }
 
 
